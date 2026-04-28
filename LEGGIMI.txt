@@ -1,0 +1,77 @@
+SITO WEB ROCCO DI DONATO — Guida rapida
+=========================================
+
+COSA C'È:
+- index.html  → il sito completo (HTML + CSS + JS in un unico file)
+- images/     → cartella per le immagini (metti qui headshot.jpg)
+- fonts/      → cartella opzionale per i file Gilroy (vedi sotto)
+
+
+COSE GIÀ PRONTE:
+✓ Link Calendly: https://calendly.com/rocco-didonato
+✓ Form contatti: invia a rocco.didonato@azimut.it via mailto (apre il client email)
+
+
+COSE DA FARE:
+
+1. FOTO HEADSHOT
+   Salva la tua foto come:  images/headshot.jpg
+   (formato verticale o quadrato, almeno 800x1000 px)
+
+1bis. LOGO DD
+   Salva il tuo logo "Di Donato Investment" come:  images/dd-logo.png
+   (formato quadrato consigliato, sfondo trasparente preferibile, almeno 300x300 px)
+   Se manca, in alto a sinistra non vedrai nulla.
+
+1ter. FOTO MEDIA & EVENTI (5 file da salvare in images/)
+   - media-1-azimut-convention.jpg          → Azimut Convention Monte-Carlo
+   - media-2-tv-interview.jpg               → intervista TV
+   - media-3-greenmed-panel.jpg             → palco Green Med
+   - media-4-with-journalist.jpg            → confronto con giornalista
+   - media-5-congresso-commercialisti.jpg   → 63° Congresso UNGDCEC Napoli
+   Formato consigliato: orizzontale 16:10 (es. 1200x750 px). Le card mostrano
+   automaticamente "Foto in arrivo" finché i file non sono presenti.
+
+2. FONT GILROY (opzionale, ma consigliato)
+   Gilroy è a pagamento. Se hai i file:
+      Gilroy-Regular.woff2
+      Gilroy-Medium.woff2
+      Gilroy-SemiBold.woff2
+      Gilroy-Bold.woff2
+   mettili in:  fonts/
+   Se non li metti, il sito userà automaticamente Manrope (Google Fonts), che è
+   visivamente molto vicino a Gilroy — il sito si vede benissimo lo stesso.
+
+3. (DOPO IL PRIMO TEST) FORM CONTATTI VIA FORMSPREE
+   Ora il form apre il client email. Per riceverle in automatico:
+   - Vai su https://formspree.io → crea account gratis (50 mail/mese)
+   - Crea un nuovo form, destinazione: rocco.didonato@azimut.it
+   - Copia l'endpoint che ti dà (es. https://formspree.io/f/xpzgkqab)
+   - In index.html cerca:
+        <form class="form-card reveal" id="contactForm" onsubmit="handleSubmit(event)">
+     sostituiscilo con:
+        <form class="form-card reveal" id="contactForm"
+              action="https://formspree.io/f/IL-TUO-CODICE" method="POST">
+
+
+METTERE IL SITO ONLINE GRATIS — opzioni:
+
+A) NETLIFY DROP (più veloce, NESSUN account necessario per il primo test)
+   1. Vai su https://app.netlify.com/drop
+   2. Trascina dentro la cartella "sito-rocco" intera
+   3. Aspetta 30 secondi → ti dà un URL tipo:
+      https://random-name-12345.netlify.app
+   4. Funziona subito. Per cambiare il nome o aggiungere un dominio personale
+      ti chiede di creare un account (gratis).
+
+B) VERCEL  → https://vercel.com — gratis, drag & drop, account richiesto
+C) CLOUDFLARE PAGES  → https://pages.cloudflare.com — gratis, account richiesto
+D) GITHUB PAGES  → gratis, richiede account GitHub e un minimo di tecnicismo
+
+
+PER UN DOMINIO PERSONALE (consigliato dopo il test):
+- roccodidonato.it     — su register.it / aruba (~10 €/anno)
+- roccodidonatowealth.com — su namecheap (~12 €/anno)
+- roccodidonato.com    — verifica disponibilità
+
+Si collega facilmente a Netlify/Vercel dopo l'acquisto (ti guido io quando lo fai).
