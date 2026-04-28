@@ -1,0 +1,1624 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="Rocco Di Donato — Financial Partner Azimut. Wealth Management, protezione del patrimonio, private markets, finanza straordinaria e M&A per imprenditori, professionisti e famiglie." />
+<title>Rocco Di Donato — Wealth Manager & Business Manager Azimut</title>
+
+<!-- Font Gilroy (file locale) + Manrope come fallback Google Fonts (geometricamente molto vicino a Gilroy) -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+/* Per usare Gilroy in locale: scarica i file Gilroy-Regular.woff2, Gilroy-Medium.woff2, Gilroy-SemiBold.woff2, Gilroy-Bold.woff2
+   e mettili in fonts/. Manrope è il fallback automatico se Gilroy non è disponibile. */
+@font-face {
+  font-family: 'Gilroy';
+  src: url('fonts/Gilroy-Regular.woff2') format('woff2');
+  font-weight: 400; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: 'Gilroy';
+  src: url('fonts/Gilroy-Medium.woff2') format('woff2');
+  font-weight: 500; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: 'Gilroy';
+  src: url('fonts/Gilroy-SemiBold.woff2') format('woff2');
+  font-weight: 600; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: 'Gilroy';
+  src: url('fonts/Gilroy-Bold.woff2') format('woff2');
+  font-weight: 700; font-style: normal; font-display: swap;
+}
+</style>
+
+<style>
+:root {
+  --green-dark: #19393b;           /* verde brand richiesto da Rocco */
+  --green-mid: #245456;             /* verde leggermente più chiaro per gradienti */
+  --green-deeper: #0F2728;          /* per ombre profonde */
+  --green-text: #19393b;
+  --gold: #D4AC4A;                  /* oro lucido */
+  --gold-light: #E8C875;
+  --gold-deep: #B8923A;
+  --cream: #FAF7F0;
+  --cream-warm: #F3ECDB;
+  --white: #FFFFFF;
+  --text-muted: #5C6B65;
+  --border-soft: rgba(25, 57, 59, 0.14);
+  --gold-gradient: linear-gradient(135deg, #E8C875 0%, #D4AC4A 50%, #B8923A 100%);
+  --green-gradient: linear-gradient(135deg, #245456 0%, #19393b 50%, #0F2728 100%);
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Gilroy', 'Manrope', 'Century Gothic', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.65;
+  color: var(--green-text);
+  background: var(--cream);
+  -webkit-font-smoothing: antialiased;
+  letter-spacing: 0;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: 'Gilroy', 'Manrope', 'Century Gothic', sans-serif;
+  font-weight: 600;
+  color: var(--green-dark);
+  line-height: 1.18;
+  letter-spacing: -0.01em;
+}
+
+h1 { font-size: clamp(2.4rem, 4.6vw, 4.2rem); font-weight: 500; letter-spacing: -0.02em; }
+h2 { font-size: clamp(1.9rem, 3.3vw, 2.8rem); font-weight: 500; letter-spacing: -0.015em; }
+h3 { font-size: clamp(1.3rem, 1.9vw, 1.6rem); font-weight: 500; }
+
+p { margin-bottom: 1rem; color: var(--green-text); }
+
+a { color: var(--green-dark); text-decoration: none; transition: all 0.25s ease; }
+a:hover { color: var(--gold); }
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.gold-text { color: var(--gold); font-weight: 500; }
+
+/* ============ NAV ============ */
+.nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  background: rgba(248, 244, 237, 0.95);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border-soft);
+  z-index: 1000;
+  transition: all 0.3s ease;
+}
+
+.nav-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1.1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  font-family: 'Gilroy', 'Manrope', 'Century Gothic', sans-serif;
+  font-weight: 600;
+  font-size: 1.2rem;
+  color: var(--green-dark);
+  letter-spacing: 0.01em;
+  line-height: 1.1;
+}
+.logo-name {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.logo-mark {
+  width: 56px; height: 56px;
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+}
+.logo-mark img {
+  width: 100%; height: 100%;
+  object-fit: contain;
+}
+.logo-mark-large {
+  width: 96px; height: 96px;
+}
+
+.logo-text-small {
+  font-family: 'Gilroy', 'Manrope', 'Century Gothic', sans-serif;
+  font-size: 0.55rem;
+  font-weight: 500;
+  letter-spacing: 0.13em;
+  color: var(--gold);
+  text-transform: uppercase;
+  display: block;
+  margin-top: 0.2rem;
+  white-space: nowrap;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2.2rem;
+  list-style: none;
+  align-items: center;
+}
+
+.nav-links a {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--green-text);
+  letter-spacing: 0.02em;
+  position: relative;
+}
+
+.nav-links a:not(.btn-nav)::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: var(--gold);
+  transition: width 0.3s ease;
+}
+
+.nav-links a:not(.btn-nav):hover::after { width: 100%; }
+
+.btn-nav {
+  background: var(--green-dark);
+  color: var(--cream) !important;
+  padding: 0.65rem 1.4rem;
+  border-radius: 2px;
+  font-weight: 500;
+}
+.btn-nav:hover { background: var(--gold); color: var(--white) !important; }
+
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.3rem;
+}
+.menu-toggle span {
+  display: block;
+  width: 26px; height: 2px;
+  background: var(--green-dark);
+  margin: 5px 0;
+  transition: all 0.3s ease;
+}
+
+/* ============ HERO ============ */
+.hero {
+  min-height: 100vh;
+  padding: 9rem 0 5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.hero-content { padding-left: 0; }
+
+.hero-eyebrow {
+  display: inline-block;
+  font-size: 0.76rem;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  background: var(--gold-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+  position: relative;
+  line-height: 1.7;
+}
+.hero-eyebrow::after {
+  content: '';
+  display: block;
+  position: absolute;
+  bottom: 0; left: 0;
+  width: 100%; height: 1px;
+  background: var(--gold-gradient);
+}
+.hero-eyebrow-sub {
+  font-size: 0.86em;
+  letter-spacing: 0.16em;
+  font-weight: 500;
+  display: inline-block;
+  margin-top: 0.15rem;
+}
+
+.hero h1 {
+  margin-bottom: 1.8rem;
+}
+.hero h1 .accent {
+  color: var(--gold);
+  font-weight: 500;
+  background: var(--gold-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.hero-sub {
+  font-size: 1.15rem;
+  color: var(--text-muted);
+  max-width: 520px;
+  margin-bottom: 2.5rem;
+  line-height: 1.7;
+}
+
+.btn-row { display: flex; gap: 1rem; flex-wrap: wrap; }
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 1rem 2rem;
+  font-size: 0.92rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-radius: 2px;
+  text-transform: uppercase;
+}
+
+.btn-primary {
+  background: var(--green-gradient);
+  color: var(--cream);
+  box-shadow: 0 4px 16px rgba(27, 107, 79, 0.25);
+  position: relative;
+  overflow: hidden;
+}
+.btn-primary::before {
+  content: '';
+  position: absolute;
+  top: 0; left: -100%;
+  width: 100%; height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.18), transparent);
+  transition: left 0.6s ease;
+}
+.btn-primary:hover {
+  background: var(--gold-gradient);
+  color: var(--white);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 28px rgba(212, 172, 74, 0.4);
+}
+.btn-primary:hover::before { left: 100%; }
+
+.btn-secondary {
+  background: transparent;
+  color: var(--green-dark);
+  border: 1px solid var(--green-dark);
+}
+.btn-secondary:hover {
+  background: var(--green-dark);
+  color: var(--cream);
+}
+
+.btn-arrow { font-size: 1.2rem; line-height: 1; }
+
+.hero-image-wrap {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-image {
+  width: 100%;
+  max-width: 480px;
+  aspect-ratio: 4/5;
+  background: var(--green-gradient);
+  border-radius: 4px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 30px 80px rgba(14, 61, 45, 0.3), 0 0 0 1px rgba(212, 172, 74, 0.15);
+}
+
+.hero-image img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  object-position: center top;
+}
+
+.hero-image-placeholder {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: var(--cream);
+  text-align: center;
+  padding: 2rem;
+}
+
+.placeholder-initials {
+  font-family: 'Gilroy', 'Manrope', 'Century Gothic', sans-serif;
+  font-size: 8rem;
+  font-weight: 600;
+  background: var(--gold-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  line-height: 1;
+  margin-bottom: 1rem;
+  letter-spacing: -0.04em;
+}
+
+.placeholder-note {
+  font-size: 0.8rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  opacity: 0.7;
+  font-weight: 500;
+}
+
+.hero-image-frame {
+  position: absolute;
+  top: 25px; right: -25px;
+  bottom: -25px; left: 25px;
+  border: 1px solid var(--gold);
+  border-radius: 4px;
+  z-index: -1;
+}
+
+/* ============ SECTIONS COMMON ============ */
+section { padding: 6rem 0; }
+
+.section-eyebrow {
+  display: inline-block;
+  font-size: 0.76rem;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  background: var(--gold-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.section-title {
+  margin-bottom: 1.5rem;
+  max-width: 700px;
+}
+.section-title .accent {
+  color: var(--gold);
+  font-weight: 500;
+  background: var(--gold-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.section-intro {
+  max-width: 720px;
+  font-size: 1.1rem;
+  color: var(--text-muted);
+  margin-bottom: 3.5rem;
+}
+
+/* ============ ABOUT ============ */
+.about {
+  background: var(--white);
+  border-top: 1px solid var(--border-soft);
+  border-bottom: 1px solid var(--border-soft);
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.3fr;
+  gap: 5rem;
+  align-items: start;
+}
+
+.about-stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.stat {
+  padding: 1.5rem 0;
+  border-top: 1px solid var(--gold);
+}
+
+.stat-number {
+  font-family: 'Gilroy', 'Manrope', 'Century Gothic', sans-serif;
+  font-size: 2.8rem;
+  font-weight: 500;
+  background: var(--green-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  line-height: 1;
+  margin-bottom: 0.4rem;
+  letter-spacing: -0.02em;
+}
+
+.stat-label {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  letter-spacing: 0.04em;
+}
+
+.about-text p { margin-bottom: 1.4rem; font-size: 1.05rem; }
+
+.about-quote {
+  margin-top: 2rem;
+  padding: 1.8rem 2rem;
+  background: var(--cream);
+  border-left: 3px solid var(--gold);
+  font-family: 'Gilroy', 'Manrope', 'Century Gothic', sans-serif;
+  font-size: 1.4rem;
+  font-style: italic;
+  color: var(--green-dark);
+  line-height: 1.4;
+}
+
+/* ============ SERVIZI ============ */
+.servizi { background: var(--cream); }
+
+.servizi-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
+.servizio-card {
+  background: var(--white);
+  padding: 2.8rem 2.5rem;
+  border-radius: 3px;
+  border: 1px solid var(--border-soft);
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.servizio-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 0; height: 3px;
+  background: var(--gold);
+  transition: width 0.4s ease;
+}
+
+.servizio-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 50px rgba(20, 48, 37, 0.1);
+}
+.servizio-card:hover::before { width: 100%; }
+
+.servizio-num {
+  font-family: 'Gilroy', 'Manrope', 'Century Gothic', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--gold);
+  letter-spacing: 0.15em;
+  margin-bottom: 1rem;
+}
+
+.servizio-card h3 {
+  margin-bottom: 1.2rem;
+  font-size: 1.6rem;
+}
+
+.servizio-card p {
+  color: var(--text-muted);
+  font-size: 0.98rem;
+  line-height: 1.7;
+}
+
+.servizio-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1.5rem;
+}
+
+.tag {
+  display: inline-block;
+  padding: 0.3rem 0.8rem;
+  background: var(--cream);
+  border: 1px solid var(--border-soft);
+  border-radius: 30px;
+  font-size: 0.78rem;
+  color: var(--green-dark);
+  font-weight: 500;
+}
+
+/* ============ APPROCCIO ============ */
+.approccio {
+  background: var(--green-dark);
+  color: var(--cream);
+  position: relative;
+  overflow: hidden;
+}
+
+.approccio::before {
+  content: '';
+  position: absolute;
+  top: -50%; right: -10%;
+  width: 600px; height: 600px;
+  background: radial-gradient(circle, rgba(184, 153, 90, 0.15) 0%, transparent 70%);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.approccio .section-title { color: var(--cream); }
+.approccio .section-eyebrow { color: var(--gold-light); }
+.approccio .section-intro { color: rgba(248, 244, 237, 0.75); }
+
+.passi {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  margin-top: 2rem;
+  position: relative;
+}
+
+.passo {
+  text-align: left;
+  padding: 1.5rem 0;
+  border-top: 1px solid rgba(184, 153, 90, 0.4);
+}
+
+.passo-num {
+  font-family: 'Gilroy', 'Manrope', 'Century Gothic', sans-serif;
+  font-size: 3.5rem;
+  font-weight: 500;
+  color: var(--gold);
+  line-height: 1;
+  margin-bottom: 1rem;
+  font-style: italic;
+}
+
+.passo h4 {
+  color: var(--cream);
+  font-size: 1.25rem;
+  margin-bottom: 0.7rem;
+}
+
+.passo p {
+  color: rgba(248, 244, 237, 0.7);
+  font-size: 0.92rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* ============ RECRUITING ============ */
+.recruiting { background: var(--cream-warm); }
+
+.recruiting-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.recruiting-visual {
+  background: var(--white);
+  padding: 3rem;
+  border-radius: 4px;
+  border: 1px solid var(--border-soft);
+  position: relative;
+}
+
+.recruiting-visual::before {
+  content: '';
+  position: absolute;
+  top: 15px; right: -15px;
+  bottom: -15px; left: 15px;
+  border: 1px solid var(--gold);
+  border-radius: 4px;
+  z-index: -1;
+}
+
+.benefit {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1.2rem 0;
+  border-bottom: 1px solid var(--border-soft);
+}
+.benefit:last-child { border-bottom: none; }
+
+.benefit-icon {
+  width: 40px; height: 40px;
+  flex-shrink: 0;
+  background: var(--cream);
+  border: 1px solid var(--gold);
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  color: var(--gold);
+  font-family: 'Gilroy', 'Manrope', 'Century Gothic', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.benefit-text strong {
+  display: block;
+  color: var(--green-dark);
+  font-weight: 600;
+  margin-bottom: 0.2rem;
+  font-size: 1rem;
+}
+
+.benefit-text span {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.recruiting-cta { margin-top: 2rem; }
+
+/* ============ QUALIFICHE ============ */
+.qualifiche { background: var(--white); }
+
+.qualifiche-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+}
+
+.qualifica-card {
+  background: var(--cream);
+  padding: 2rem 1.5rem;
+  text-align: center;
+  border-radius: 4px;
+  border: 1px solid var(--border-soft);
+  transition: all 0.35s ease;
+}
+
+.qualifica-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 38px rgba(27, 107, 79, 0.12);
+  border-color: var(--gold);
+}
+
+.qualifica-mark {
+  width: 70px; height: 70px;
+  margin: 0 auto 1.2rem;
+}
+.qualifica-mark svg { width: 100%; height: 100%; }
+
+.qualifica-card h4 {
+  font-size: 1.15rem;
+  margin-bottom: 0.6rem;
+  color: var(--green-dark);
+}
+
+.qualifica-card p {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  line-height: 1.55;
+  margin: 0;
+}
+
+/* ============ MEDIA & EVENTI ============ */
+.media { background: var(--white); }
+
+.media-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.6rem;
+}
+/* Quando ci sono 5 card, le ultime 2 si centrano sotto le 3 della prima riga */
+.media-grid .media-card:nth-child(4) { grid-column: 1 / span 1; }
+.media-grid .media-card:nth-child(5) { grid-column: 2 / span 1; }
+
+.media-card {
+  margin: 0;
+  background: var(--cream);
+  border-radius: 4px;
+  overflow: hidden;
+  border: 1px solid var(--border-soft);
+  transition: all 0.4s ease;
+}
+.media-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 44px rgba(25, 57, 59, 0.15);
+  border-color: var(--gold);
+}
+
+.media-image {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  background: var(--green-gradient);
+  position: relative;
+}
+.media-image img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+  display: block;
+}
+.media-card:hover .media-image img { transform: scale(1.04); }
+
+.media-image.placeholder::after {
+  content: 'Foto in arrivo';
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--gold-light);
+  font-size: 0.85rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+.media-image.placeholder img { display: none; }
+
+.media-card figcaption {
+  padding: 1.4rem 1.6rem 1.6rem;
+}
+.media-card figcaption strong {
+  display: block;
+  color: var(--green-dark);
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.35rem;
+  line-height: 1.35;
+}
+.media-card figcaption span {
+  display: block;
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  letter-spacing: 0.04em;
+}
+
+/* ============ CONTATTI ============ */
+.contatti { background: var(--cream); }
+
+.contatti-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 4rem;
+}
+
+.contatti-info h3 {
+  margin-bottom: 1.5rem;
+}
+
+.contact-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1.2rem 0;
+  border-bottom: 1px solid var(--border-soft);
+}
+
+.contact-icon {
+  width: 38px; height: 38px;
+  flex-shrink: 0;
+  background: var(--green-dark);
+  color: var(--gold);
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.contact-text strong {
+  display: block;
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-bottom: 0.3rem;
+}
+
+.contact-text a, .contact-text span {
+  color: var(--green-dark);
+  font-size: 1.05rem;
+  font-weight: 500;
+}
+
+.contact-text a:hover { color: var(--gold); }
+
+.calendly-banner {
+  margin-top: 2rem;
+  padding: 1.8rem;
+  background: var(--green-dark);
+  color: var(--cream);
+  border-radius: 4px;
+  text-align: center;
+}
+
+.calendly-banner h4 {
+  color: var(--cream);
+  margin-bottom: 0.5rem;
+}
+
+.calendly-banner p {
+  color: rgba(248, 244, 237, 0.8);
+  font-size: 0.9rem;
+  margin-bottom: 1.2rem;
+}
+
+.calendly-banner .btn { background: var(--gold); color: var(--green-dark); }
+.calendly-banner .btn:hover { background: var(--cream); }
+
+/* form */
+.form-card {
+  background: var(--white);
+  padding: 3rem;
+  border-radius: 4px;
+  border: 1px solid var(--border-soft);
+  box-shadow: 0 10px 40px rgba(20, 48, 37, 0.05);
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.2rem;
+  margin-bottom: 1.2rem;
+}
+
+.form-group { margin-bottom: 1.2rem; }
+
+.form-group label {
+  display: block;
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: var(--green-dark);
+  margin-bottom: 0.5rem;
+  letter-spacing: 0.04em;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+  width: 100%;
+  padding: 0.85rem 1rem;
+  border: 1px solid var(--border-soft);
+  border-radius: 2px;
+  font-family: 'Gilroy', 'Manrope', 'Century Gothic', sans-serif;
+  font-size: 0.95rem;
+  color: var(--green-text);
+  background: var(--cream);
+  transition: all 0.25s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: var(--gold);
+  background: var(--white);
+  box-shadow: 0 0 0 3px rgba(184, 153, 90, 0.1);
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.form-consent {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin: 1.2rem 0 1.5rem;
+}
+
+.form-consent input { width: auto; margin-top: 0.2rem; }
+
+#form-feedback {
+  display: none;
+  margin-top: 1rem;
+  padding: 1rem;
+  background: var(--green-dark);
+  color: var(--cream);
+  border-radius: 2px;
+  font-size: 0.9rem;
+}
+
+/* ============ FOOTER ============ */
+.footer {
+  background: var(--green-deeper);
+  color: var(--cream);
+  padding: 4rem 0 2rem;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 3rem;
+  margin-bottom: 3rem;
+}
+
+.footer-brand p {
+  color: rgba(248, 244, 237, 0.7);
+  font-size: 0.92rem;
+  max-width: 360px;
+  margin-top: 1rem;
+}
+
+.footer-col h5 {
+  font-family: 'Gilroy', 'Manrope', 'Century Gothic', sans-serif;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--gold);
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  margin-bottom: 1.2rem;
+}
+
+.footer-col ul { list-style: none; }
+.footer-col li { margin-bottom: 0.6rem; }
+.footer-col a {
+  color: rgba(248, 244, 237, 0.75);
+  font-size: 0.92rem;
+}
+.footer-col a:hover { color: var(--gold); }
+
+.footer-bottom {
+  border-top: 1px solid rgba(184, 153, 90, 0.2);
+  padding-top: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: rgba(248, 244, 237, 0.6);
+  font-size: 0.82rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.disclaimer {
+  margin-top: 1rem;
+  color: rgba(248, 244, 237, 0.5);
+  font-size: 0.78rem;
+  line-height: 1.5;
+  max-width: 800px;
+}
+
+/* ============ RESPONSIVE ============ */
+@media (max-width: 980px) {
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 100%; left: 0; right: 0;
+    background: var(--cream);
+    flex-direction: column;
+    padding: 1.5rem 2rem;
+    gap: 1.2rem;
+    border-bottom: 1px solid var(--border-soft);
+  }
+  .nav-links.open { display: flex; }
+  .menu-toggle { display: block; }
+
+  .hero { padding: 7rem 0 4rem; }
+  .hero-grid,
+  .about-grid,
+  .recruiting-grid,
+  .contatti-grid,
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .hero-image { max-width: 360px; margin: 0 auto; }
+  .servizi-grid { grid-template-columns: 1fr; }
+  .qualifiche-grid { grid-template-columns: 1fr 1fr; }
+  .media-grid { grid-template-columns: 1fr; }
+  .media-grid .media-card:nth-child(4),
+  .media-grid .media-card:nth-child(5) { grid-column: 1 / -1; }
+
+  .passi { grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+
+  section { padding: 4rem 0; }
+  .container { padding: 0 1.5rem; }
+  .nav-inner { padding: 1rem 1.5rem; }
+
+  .form-card { padding: 2rem; }
+  .form-row { grid-template-columns: 1fr; }
+  .footer-bottom { flex-direction: column; text-align: center; }
+}
+
+@media (max-width: 540px) {
+  .passi { grid-template-columns: 1fr; }
+  .qualifiche-grid { grid-template-columns: 1fr; }
+  .placeholder-initials { font-size: 5.5rem; }
+  .hero-eyebrow { font-size: 0.7rem; }
+  .btn { padding: 0.85rem 1.5rem; font-size: 0.85rem; }
+  .logo { font-size: 0.95rem; gap: 0.5rem; }
+  .logo-mark { width: 42px; height: 42px; }
+  .logo-text-small { font-size: 0.5rem; letter-spacing: 0.1em; }
+}
+
+/* fade in animations */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+</style>
+</head>
+<body>
+
+<!-- ============ NAVIGATION ============ -->
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="#hero" class="logo" aria-label="Rocco Di Donato — Azimut Capital Management SGR Spa">
+      <span class="logo-mark">
+        <img src="images/dd-logo.jpg" alt="Di Donato Investment" />
+      </span>
+      <span class="logo-name">
+        Rocco Di Donato
+        <span class="logo-text-small">Azimut Capital Management SGR Spa</span>
+      </span>
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#chi-sono">Chi Sono</a></li>
+      <li><a href="#servizi">Servizi</a></li>
+      <li><a href="#approccio">Approccio</a></li>
+      <li><a href="#recruiting">Recruiting</a></li>
+      <li><a href="#media">Media</a></li>
+      <li><a href="#contatti" class="btn-nav">Parliamone</a></li>
+    </ul>
+    <button class="menu-toggle" id="menuToggle" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="hero">
+  <div class="container">
+    <div class="hero-grid">
+      <div class="hero-content reveal">
+        <span class="hero-eyebrow">Wealth Manager • Business Manager<br><span class="hero-eyebrow-sub">Azimut Capital Management</span></span>
+        <h1>Guidare il cambiamento, valorizzare il <span class="accent">patrimonio</span>, costruire il futuro.</h1>
+        <p class="hero-sub">Affianco imprenditori, professionisti e famiglie nelle scelte finanziarie strategiche. Integro patrimonio personale, familiare e impresa con metodo, indipendenza e visione di lungo periodo.</p>
+        <div class="btn-row">
+          <a href="#contatti" class="btn btn-primary">Prenota un confronto <span class="btn-arrow">→</span></a>
+          <a href="#servizi" class="btn btn-secondary">Scopri i servizi</a>
+        </div>
+      </div>
+      <div class="hero-image-wrap reveal">
+        <div class="hero-image">
+          <!-- Sostituisci il src qui sotto con la tua foto: images/headshot.jpg -->
+          <img src="images/headshot.jpg" alt="Rocco Di Donato" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+          <div class="hero-image-placeholder" style="display:none;">
+            <div class="placeholder-initials">DD</div>
+            <div class="placeholder-note">Carica la tua foto in<br>images/headshot.jpg</div>
+          </div>
+          <div class="hero-image-frame"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CHI SONO ============ -->
+<section class="about" id="chi-sono">
+  <div class="container">
+    <div class="about-grid">
+      <div class="reveal">
+        <span class="section-eyebrow">Chi Sono</span>
+        <h2 class="section-title">Una visione integrata della <span class="accent">tua ricchezza</span>.</h2>
+        <div class="about-stats">
+          <div class="stat">
+            <div class="stat-number">20+</div>
+            <div class="stat-label">Anni di esperienza nei mercati finanziari</div>
+          </div>
+          <div class="stat">
+            <div class="stat-number">2022</div>
+            <div class="stat-label">Financial Partner Azimut</div>
+          </div>
+          <div class="stat">
+            <div class="stat-number">200+</div>
+            <div class="stat-label">Clienti seguiti tra imprenditori e famiglie</div>
+          </div>
+          <div class="stat">
+            <div class="stat-number">ESG</div>
+            <div class="stat-label">Advisor certificato EFPA &middot; Napoli &amp; Salerno</div>
+          </div>
+        </div>
+      </div>
+      <div class="about-text reveal">
+        <p>Sono <strong>Rocco Di Donato</strong>, Financial Partner di Azimut Capital Management e Business Manager. Dottore magistrale in Economia Aziendale, ho costruito la mia esperienza professionale in oltre vent'anni dentro alcune delle più importanti banche italiane, prima di scegliere Azimut nel 2022 per portare ai miei clienti una proposta più ampia, indipendente e su misura.</p>
+        <p>Mi occupo di <strong>wealth management e protezione del patrimonio</strong> per imprenditori e famiglie, di operazioni di <strong>finanza straordinaria, M&amp;A e tesoreria aziendale</strong> per le PMI, e di <strong>investimenti in economia reale</strong> attraverso i private markets — un ambito riservato alla clientela selezionata in cui Azimut è leader europeo.</p>
+        <p>Sono inoltre <strong>ESG Advisor certificato EFPA</strong>: integro nei portafogli dei miei clienti criteri ambientali, sociali e di governance, perché creare valore oggi significa anche scegliere dove e come quel valore si genera.</p>
+        <p>Credo in un approccio fondato su trasparenza, ascolto e fiducia. Le decisioni finanziarie più importanti riguardano sempre persone, famiglie e progetti di vita. Il mio compito è metterli al centro.</p>
+        <div class="about-quote">"Le decisioni finanziarie più importanti non riguardano i mercati. Riguardano le persone, le famiglie e i progetti di una vita."</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SERVIZI ============ -->
+<section class="servizi" id="servizi">
+  <div class="container">
+    <div class="reveal">
+      <span class="section-eyebrow">I Servizi</span>
+      <h2 class="section-title">Quattro aree di consulenza per <span class="accent">decisioni strategiche</span>.</h2>
+      <p class="section-intro">Ogni cliente ha esigenze uniche. Ti affianco con competenze specialistiche su tutte le leve patrimoniali, integrando la dimensione personale, familiare e d'impresa.</p>
+    </div>
+    <div class="servizi-grid">
+      <div class="servizio-card reveal">
+        <div class="servizio-num">— 01</div>
+        <h3>Wealth Management</h3>
+        <p>Progettazione patrimoniale su misura per imprenditori e famiglie. Asset allocation strategica, diversificazione internazionale, monitoraggio continuo. Una visione integrata che mette al centro i tuoi obiettivi di vita, non solo i mercati.</p>
+        <div class="servizio-tags">
+          <span class="tag">Asset Allocation</span>
+          <span class="tag">Risparmio Gestito</span>
+          <span class="tag">Pianificazione</span>
+        </div>
+      </div>
+
+      <div class="servizio-card reveal">
+        <div class="servizio-num">— 02</div>
+        <h3>Protezione del Patrimonio</h3>
+        <p>Strategie multidisciplinari per mettere al sicuro ciò che hai costruito. Analisi dei rischi personali e d'impresa, strumenti fiduciari, soluzioni assicurative su misura, pianificazione successoria e passaggio generazionale.</p>
+        <div class="servizio-tags">
+          <span class="tag">Servizi Fiduciari</span>
+          <span class="tag">Insurance</span>
+          <span class="tag">Passaggio Generazionale</span>
+          <span class="tag">Efficienza Fiscale</span>
+        </div>
+      </div>
+
+      <div class="servizio-card reveal">
+        <div class="servizio-num">— 03</div>
+        <h3>Private Markets — Economia Reale</h3>
+        <p>Accesso esclusivo a Private Equity, Venture Capital, Private Debt, Real Assets, Club Deal e Infrastructure. Strumenti riservati alla clientela selezionata, costruiti per generare valore nel lungo periodo, decorrelata dalla volatilità dei mercati pubblici.</p>
+        <div class="servizio-tags">
+          <span class="tag">Private Equity</span>
+          <span class="tag">Venture Capital</span>
+          <span class="tag">Private Debt</span>
+          <span class="tag">Real Assets</span>
+          <span class="tag">Club Deal</span>
+        </div>
+      </div>
+
+      <div class="servizio-card reveal">
+        <div class="servizio-num">— 04</div>
+        <h3>Finanza Straordinaria &amp; M&amp;A</h3>
+        <p>Affianco PMI e imprenditori nelle operazioni più delicate del ciclo aziendale: M&amp;A, ristrutturazioni finanziarie, pianificazione del passaggio generazionale, IPO, ricerca di capitali e supporto strategico nelle fasi di crescita.</p>
+        <div class="servizio-tags">
+          <span class="tag">M&amp;A</span>
+          <span class="tag">Finanza d'Impresa</span>
+          <span class="tag">IPO</span>
+          <span class="tag">Tesoreria</span>
+          <span class="tag">Capital Raising</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ APPROCCIO ============ -->
+<section class="approccio" id="approccio">
+  <div class="container">
+    <div class="reveal">
+      <span class="section-eyebrow">Il Metodo</span>
+      <h2 class="section-title">Un percorso strutturato in <span class="accent">quattro tappe</span>.</h2>
+      <p class="section-intro">Ogni relazione consulenziale parte da una conoscenza profonda. Solo da lì può nascere una strategia davvero efficace e personalizzata.</p>
+    </div>
+    <div class="passi">
+      <div class="passo reveal">
+        <div class="passo-num">01</div>
+        <h4>Ascolto</h4>
+        <p>Confronto iniziale per comprendere obiettivi, valori, contesto familiare e d'impresa.</p>
+      </div>
+      <div class="passo reveal">
+        <div class="passo-num">02</div>
+        <h4>Analisi</h4>
+        <p>Mappatura completa di patrimonio, rischi, fiscalità e opportunità non ancora colte.</p>
+      </div>
+      <div class="passo reveal">
+        <div class="passo-num">03</div>
+        <h4>Strategia</h4>
+        <p>Costruzione di un piano integrato su misura, con obiettivi chiari e orizzonti temporali definiti.</p>
+      </div>
+      <div class="passo reveal">
+        <div class="passo-num">04</div>
+        <h4>Relazione</h4>
+        <p>Monitoraggio continuo e revisione periodica. La consulenza è un percorso, non un evento.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ RECRUITING ============ -->
+<section class="recruiting" id="recruiting">
+  <div class="container">
+    <div class="recruiting-grid">
+      <div class="reveal">
+        <span class="section-eyebrow">Recruiting Consulenti</span>
+        <h2 class="section-title">Cerchiamo consulenti finanziari e bancari pronti al <span class="accent">prossimo passo</span>.</h2>
+        <p style="color: var(--text-muted); font-size: 1.1rem; margin-bottom: 1.5rem;">Sei un consulente finanziario, un banker o un professionista del wealth management che vuole costruire un progetto più ambizioso, autonomo e coerente con i propri valori? Parliamone.</p>
+        <p style="color: var(--text-muted);">Da Business Manager Azimut accolgo nel team professionisti che condividono il nostro approccio: indipendenza, qualità della consulenza, centralità del cliente, ambizione di crescere.</p>
+        <a href="#contatti" class="btn btn-primary recruiting-cta">Candidati al team <span class="btn-arrow">→</span></a>
+      </div>
+      <div class="recruiting-visual reveal">
+        <h3 style="margin-bottom: 1.5rem; font-size: 1.5rem;">Cosa offriamo ai consulenti</h3>
+        <div class="benefit">
+          <div class="benefit-icon">★</div>
+          <div class="benefit-text">
+            <strong>Brand internazionale, struttura indipendente</strong>
+            <span>Azimut: 36 anni di storia, 20 paesi, €150 miliardi di masse gestite — senza vincoli di gruppi bancari o assicurativi.</span>
+          </div>
+        </div>
+        <div class="benefit">
+          <div class="benefit-icon">◆</div>
+          <div class="benefit-text">
+            <strong>Offerta multi-asset e multi-prodotto</strong>
+            <span>Risparmio gestito, private markets, finanza straordinaria, servizi fiduciari, insurance, welfare aziendale: tutto sotto un unico tetto.</span>
+          </div>
+        </div>
+        <div class="benefit">
+          <div class="benefit-icon">▲</div>
+          <div class="benefit-text">
+            <strong>Accesso esclusivo ai Private Markets</strong>
+            <span>Private Equity, Venture Capital, Real Assets, Club Deal: prodotti d'eccellenza che fanno la differenza con la clientela selezionata.</span>
+          </div>
+        </div>
+        <div class="benefit">
+          <div class="benefit-icon">●</div>
+          <div class="benefit-text">
+            <strong>Proprietà del cliente e del portafoglio</strong>
+            <span>Modello pensato per chi vuole costruire un proprio brand professionale durevole, non un dipendente.</span>
+          </div>
+        </div>
+        <div class="benefit">
+          <div class="benefit-icon">✦</div>
+          <div class="benefit-text">
+            <strong>Formazione continua e supporto manageriale</strong>
+            <span>Affianco diretto, percorsi di crescita certificata, accesso a un team di gestori e analisti tra i più qualificati d'Europa.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ QUALIFICHE ============ -->
+<section class="qualifiche" id="qualifiche">
+  <div class="container">
+    <div class="reveal" style="text-align: center; margin-bottom: 3rem;">
+      <span class="section-eyebrow">Qualifiche &amp; Certificazioni</span>
+      <h2 class="section-title" style="margin: 0.5rem auto 1rem;">Un percorso costruito su <span class="accent">competenza certificata</span>.</h2>
+    </div>
+    <div class="qualifiche-grid">
+      <div class="qualifica-card reveal">
+        <div class="qualifica-mark">
+          <svg viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="30" cy="30" r="28" fill="none" stroke="#D4AC4A" stroke-width="1.5"/>
+            <text x="30" y="40" text-anchor="middle" font-family="Century Gothic, sans-serif" font-size="22" font-weight="500" fill="#D4AC4A">DD</text>
+          </svg>
+        </div>
+        <h4>Financial Partner</h4>
+        <p>Azimut Capital Management Sgr S.p.A. — dal 2022</p>
+      </div>
+      <div class="qualifica-card reveal">
+        <div class="qualifica-mark">
+          <svg viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="30" cy="30" r="28" fill="none" stroke="#D4AC4A" stroke-width="1.5"/>
+            <text x="30" y="34" text-anchor="middle" font-family="Gilroy, Manrope, sans-serif" font-size="11" font-weight="700" fill="#D4AC4A">EFPA</text>
+            <text x="30" y="46" text-anchor="middle" font-family="Gilroy, Manrope, sans-serif" font-size="9" font-weight="600" fill="#D4AC4A">ESG</text>
+          </svg>
+        </div>
+        <h4>ESG Advisor EFPA</h4>
+        <p>Certificazione EFPA per la consulenza ESG e l'integrazione dei criteri di sostenibilità nei portafogli dei clienti.</p>
+      </div>
+      <div class="qualifica-card reveal">
+        <div class="qualifica-mark">
+          <svg viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="30" cy="30" r="28" fill="none" stroke="#D4AC4A" stroke-width="1.5"/>
+            <text x="30" y="38" text-anchor="middle" font-family="Century Gothic, sans-serif" font-size="14" font-weight="600" fill="#D4AC4A">OCF</text>
+          </svg>
+        </div>
+        <h4>Albo OCF</h4>
+        <p>Iscritto all'Albo unico dei Consulenti Finanziari abilitati all'offerta fuori sede.</p>
+      </div>
+      <div class="qualifica-card reveal">
+        <div class="qualifica-mark">
+          <svg viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="30" cy="30" r="28" fill="none" stroke="#D4AC4A" stroke-width="1.5"/>
+            <text x="30" y="38" text-anchor="middle" font-family="Century Gothic, sans-serif" font-size="13" font-weight="600" fill="#D4AC4A">M.Sc</text>
+          </svg>
+        </div>
+        <h4>Economia Aziendale</h4>
+        <p>Dottore magistrale, con specializzazione in finanza d'impresa e mercati finanziari.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ MEDIA & EVENTI ============ -->
+<section class="media" id="media">
+  <div class="container">
+    <div class="reveal" style="text-align: center; margin-bottom: 3rem;">
+      <span class="section-eyebrow">Media &amp; Eventi</span>
+      <h2 class="section-title" style="margin: 0.5rem auto 1rem;">Sul campo, sui palchi, <span class="accent">tra gli addetti ai lavori</span>.</h2>
+      <p class="section-intro" style="margin: 0 auto;">Convention internazionali, panel di settore e interviste: la consulenza è una professione che si costruisce anche fuori dall'ufficio.</p>
+    </div>
+
+    <div class="media-grid">
+      <figure class="media-card reveal">
+        <div class="media-image">
+          <img src="images/media-1-azimut-convention.jpg" alt="Azimut Convention Monte-Carlo 2026" onerror="this.parentElement.classList.add('placeholder')" />
+        </div>
+        <figcaption>
+          <strong>Azimut Convention &mdash; "Ascolta e Innova: AI"</strong>
+          <span>Monte-Carlo, gennaio 2026</span>
+        </figcaption>
+      </figure>
+
+      <figure class="media-card reveal">
+        <div class="media-image">
+          <img src="images/media-2-tv-interview.jpg" alt="Intervista televisiva" onerror="this.parentElement.classList.add('placeholder')" />
+        </div>
+        <figcaption>
+          <strong>Intervista TV &mdash; "Wealth Management e PMI"</strong>
+          <span>Studio televisivo, 2025</span>
+        </figcaption>
+      </figure>
+
+      <figure class="media-card reveal">
+        <div class="media-image">
+          <img src="images/media-3-greenmed-panel.jpg" alt="Panel Green Med Symposium" onerror="this.parentElement.classList.add('placeholder')" />
+        </div>
+        <figcaption>
+          <strong>Green Med Symposium &mdash; Panel ESG &amp; Finanza</strong>
+          <span>Napoli, 2025</span>
+        </figcaption>
+      </figure>
+
+      <figure class="media-card reveal">
+        <div class="media-image">
+          <img src="images/media-4-with-journalist.jpg" alt="Confronto a margine evento" onerror="this.parentElement.classList.add('placeholder')" />
+        </div>
+        <figcaption>
+          <strong>Confronto a margine &mdash; con un volto noto del giornalismo nazionale</strong>
+          <span>Green Med Symposium, 2025</span>
+        </figcaption>
+      </figure>
+
+      <figure class="media-card reveal">
+        <div class="media-image">
+          <img src="images/media-5-congresso-commercialisti.jpg" alt="63&deg; Congresso Nazionale UNGDCEC" onerror="this.parentElement.classList.add('placeholder')" />
+        </div>
+        <figcaption>
+          <strong>Workshop &laquo;La tutela del patrimonio nelle operazioni di M&amp;A&raquo;</strong>
+          <span>63&deg; Congresso Nazionale UNGDCEC &mdash; Napoli, marzo 2026</span>
+        </figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTATTI ============ -->
+<section class="contatti" id="contatti">
+  <div class="container">
+    <div class="reveal" style="text-align: center; margin-bottom: 3rem;">
+      <span class="section-eyebrow">Contatti</span>
+      <h2 class="section-title" style="margin: 0.5rem auto 1rem;">Iniziamo a <span class="accent">parlarne</span>.</h2>
+      <p class="section-intro" style="margin: 0 auto;">Un primo confronto è sempre gratuito e senza impegno. Scegli il canale che preferisci.</p>
+    </div>
+
+    <div class="contatti-grid">
+      <div class="contatti-info reveal">
+        <div class="contact-item">
+          <div class="contact-icon">✉</div>
+          <div class="contact-text">
+            <strong>Email</strong>
+            <a href="mailto:rocco.didonato@azimut.it">rocco.didonato@azimut.it</a>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">☏</div>
+          <div class="contact-text">
+            <strong>Telefono &amp; WhatsApp</strong>
+            <a href="tel:+393470477392">+39 347 047 7392</a>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">in</div>
+          <div class="contact-text">
+            <strong>LinkedIn</strong>
+            <a href="https://www.linkedin.com/in/rocco-di-donato/" target="_blank" rel="noopener">linkedin.com/in/rocco-di-donato</a>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">⌂</div>
+          <div class="contact-text">
+            <strong>Sedi</strong>
+            <span>Via Crispi 21, Napoli<br>Via Roma 33, Salerno</span>
+          </div>
+        </div>
+
+        <div class="calendly-banner">
+          <h4>Prenota una call</h4>
+          <p>Scegli direttamente lo slot più comodo per un primo confronto da 30 minuti.</p>
+          <a href="https://calendly.com/rocco-didonato" target="_blank" rel="noopener" class="btn">Apri il calendario <span class="btn-arrow">→</span></a>
+        </div>
+      </div>
+
+      <form class="form-card reveal" id="contactForm" onsubmit="handleSubmit(event)">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="nome">Nome e Cognome *</label>
+            <input type="text" id="nome" name="nome" required />
+          </div>
+          <div class="form-group">
+            <label for="email">Email *</label>
+            <input type="email" id="email" name="email" required />
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="telefono">Telefono</label>
+            <input type="tel" id="telefono" name="telefono" />
+          </div>
+          <div class="form-group">
+            <label for="argomento">Argomento *</label>
+            <select id="argomento" name="argomento" required>
+              <option value="">Seleziona...</option>
+              <option>Wealth Management</option>
+              <option>Protezione del Patrimonio</option>
+              <option>Private Markets</option>
+              <option>Finanza Straordinaria / M&amp;A</option>
+              <option>Candidatura — Recruiting</option>
+              <option>Altro</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="messaggio">Messaggio *</label>
+          <textarea id="messaggio" name="messaggio" required placeholder="Raccontami brevemente di cosa avresti bisogno..."></textarea>
+        </div>
+        <div class="form-consent">
+          <input type="checkbox" id="privacy" required />
+          <label for="privacy" style="font-size: 0.85rem; color: var(--text-muted); margin: 0;">Acconsento al trattamento dei miei dati personali secondo quanto previsto dalla Privacy Policy ai sensi del GDPR (Reg. UE 679/2016).</label>
+        </div>
+        <button type="submit" class="btn btn-primary" style="width: 100%;">Invia richiesta <span class="btn-arrow">→</span></button>
+        <div id="form-feedback">Grazie! Ho ricevuto la tua richiesta. Ti rispondo entro 24 ore lavorative.</div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="logo logo-footer" style="color: var(--cream);">
+          <span class="logo-mark logo-mark-large">
+            <img src="images/dd-logo.jpg" alt="Di Donato Investment" />
+          </span>
+        </div>
+        <p style="margin-top: 1rem;">Wealth Manager &amp; Business Manager Azimut Capital Management. Affianco imprenditori, professionisti e famiglie nelle scelte finanziarie più importanti.</p>
+      </div>
+      <div class="footer-col">
+        <h5>Naviga</h5>
+        <ul>
+          <li><a href="#chi-sono">Chi Sono</a></li>
+          <li><a href="#servizi">Servizi</a></li>
+          <li><a href="#approccio">Metodo</a></li>
+          <li><a href="#recruiting">Recruiting</a></li>
+          <li><a href="#contatti">Contatti</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Contatti</h5>
+        <ul>
+          <li><a href="mailto:rocco.didonato@azimut.it">rocco.didonato@azimut.it</a></li>
+          <li><a href="tel:+393470477392">+39 347 047 7392</a></li>
+          <li><a href="https://www.linkedin.com/in/rocco-di-donato/" target="_blank" rel="noopener">LinkedIn</a></li>
+          <li>Napoli &amp; Salerno</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>© 2026 Rocco Di Donato — Tutti i diritti riservati.</div>
+      <div>
+        <a href="#">Privacy Policy</a> &nbsp;·&nbsp; <a href="#">Cookie Policy</a> &nbsp;·&nbsp; <a href="#">Note legali</a>
+      </div>
+    </div>
+    <div class="disclaimer">
+      Rocco Di Donato è Financial Partner di Azimut Capital Management Sgr S.p.A., iscritto all'albo unico dei consulenti finanziari abilitati all'offerta fuori sede tenuto dall'OCF. Le informazioni presenti su questo sito hanno finalità promozionale e non costituiscono offerta o sollecitazione al pubblico risparmio, né consulenza finanziaria personalizzata.
+    </div>
+  </div>
+</footer>
+
+<script>
+// Mobile menu toggle
+const menuToggle = document.getElementById('menuToggle');
+const navLinks = document.getElementById('navLinks');
+menuToggle.addEventListener('click', () => navLinks.classList.toggle('open'));
+navLinks.querySelectorAll('a').forEach(a =>
+  a.addEventListener('click', () => navLinks.classList.remove('open'))
+);
+
+// Reveal on scroll
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+      observer.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.12, rootMargin: '0px 0px -50px 0px' });
+
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+// Form handler — apre il client email dell'utente con tutti i campi precompilati
+// e invia la richiesta a rocco.didonato@azimut.it
+// (Soluzione immediata per il primo test. Per ricevere le mail in automatico senza
+// passare dal client, sostituire questo handler con Formspree o EmailJS — vedi LEGGIMI.txt)
+const DESTINATION_EMAIL = 'rocco.didonato@azimut.it';
+
+function handleSubmit(e) {
+  e.preventDefault();
+  const f = e.target;
+  const nome = encodeURIComponent(f.nome.value);
+  const email = encodeURIComponent(f.email.value);
+  const tel = encodeURIComponent(f.telefono.value || '—');
+  const arg = encodeURIComponent(f.argomento.value);
+  const msg = encodeURIComponent(f.messaggio.value);
+
+  const subject = encodeURIComponent('Richiesta dal sito — ' + decodeURIComponent(arg));
+  const body =
+    'Nuova richiesta dal sito roccodidonato%0D%0A' +
+    '%0D%0ANome: ' + nome +
+    '%0D%0AEmail: ' + email +
+    '%0D%0ATelefono: ' + tel +
+    '%0D%0AArgomento: ' + arg +
+    '%0D%0A%0D%0AMessaggio:%0D%0A' + msg;
+
+  window.location.href = 'mailto:' + DESTINATION_EMAIL + '?subject=' + subject + '&body=' + body;
+
+  const fb = document.getElementById('form-feedback');
+  fb.style.display = 'block';
+  fb.innerHTML = 'Si sta aprendo il tuo client email con la richiesta precompilata.<br>Premi <strong>Invia</strong> per completare. Se non si apre, scrivi direttamente a <a href="mailto:' + DESTINATION_EMAIL + '" style="color:#D4AC4A;">' + DESTINATION_EMAIL + '</a>';
+  setTimeout(() => fb.scrollIntoView({behavior: 'smooth', block: 'center'}), 200);
+}
+</script>
+</body>
+</html>
